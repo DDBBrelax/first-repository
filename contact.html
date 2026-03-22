@@ -3,27 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>首页</title>
+  <title>联系我</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- 导航栏（所有页面通用） -->
 <nav class="navbar">
   <div class="logo">我的网站</div>
   <ul class="nav-links">
-    <li><a href="index.html" class="active">首页</a></li>
+    <li><a href="index.html">首页</a></li>
     <li><a href="about.html">关于</a></li>
     <li><a href="works.html">作品</a></li>
-    <li><a href="contact.html">联系</a></li>
+    <li><a href="contact.html" class="active">联系</a></li>
   </ul>
 </nav>
 
-<!-- 内容区 -->
 <section class="container">
-  <h1>欢迎来到我的网站</h1>
-  <p>这是一个多级页面、可交互的网站</p>
-  <button class="btn" onclick="showMessage()">点我交互</button>
+  <h1>联系我</h1>
+  <form class="contact-form" onsubmit="submitForm(event)">
+    <input type="text" placeholder="你的名字" required><br>
+    <input type="email" placeholder="你的邮箱" required><br>
+    <textarea placeholder="留言"></textarea><br>
+    <button class="btn" type="submit">提交</button>
+  </form>
 </section>
 
 <script src="script.js"></script>
